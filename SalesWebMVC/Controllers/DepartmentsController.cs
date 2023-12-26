@@ -104,7 +104,7 @@ namespace SalesWebMVC.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DepartmentExists(department.Id))
+                    if (!DepartmentExists((int)department.Id))
                     {
                         return NotFound();
                     }
